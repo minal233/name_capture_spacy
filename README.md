@@ -25,8 +25,10 @@ python -m spacy download en_core_web_md
 ```bash
 # Build custom spaCy model for better Indian name detection
 python custom_spacy.py
+```
 
 ## Train & Run
+
 ```bash
 # Terminal 1: Start action server
 rasa run actions
@@ -36,3 +38,4 @@ rasa train
 
 # Terminal 3: Interactive testing
 rasa shell --endpoints endpoints.yml
+```
