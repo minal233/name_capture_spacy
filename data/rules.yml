@@ -1,0 +1,33 @@
+version: "3.1"
+
+rules:
+  # Rule 1: Bot speaks first when conversation starts
+  - rule: Ask for name at start of conversation
+    conversation_start: true
+    steps:
+      - action: utter_ask_full_name
+
+  # Rule 2: When user provides their name (main intent)
+  - rule: Capture and validate name
+    steps:
+      - intent: provide_name
+      - action: validate_full_name
+      - action: utter_greet_with_name # Only if validation passes
+
+  # Rule 3: Reprompt if name was invalid or missing
+  - rule: Reprompt for name if invalid
+    steps:
+      - slot_was_set:
+          - full_name: null
+      - action: utter_invalid_name
+
+  # Rule 4: Handle greetings or random messages (ask for name again)
+  - rule: Respond to greetings or unknown input
+    steps:
+      - intent: greet
+      - action: utter_ask_full_name
+
+  # Rule 5: Fallback for anything else
+  - rule: Fallback when nothing matches
+    steps:
+      - action: utter_default

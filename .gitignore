@@ -1,0 +1,35 @@
+# Python & Rasa
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.venv/
+*.egg-info/
+
+# Trained models and large binaries
+models/
+custom_en_model/
+
+
+# IDE / Editor
+.vscode/
+.idea/
+*.swp
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Rasa cache and temporary files
+.rasa/
+.rasa/cache/
+.rasa/*.lock

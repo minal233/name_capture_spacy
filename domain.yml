@@ -1,0 +1,35 @@
+version: "3.1"
+
+intents:
+  - provide_name
+  - greet # Added second intent to fix DIETClassifier error
+
+entities:
+  - full_name
+  - PERSON
+
+slots:
+  full_name:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: full_name
+        conditions:
+          - active_loop: null
+
+responses:
+  utter_ask_full_name:
+    - text: "Can you please tell me your full name?"
+
+  utter_greet_with_name:
+    - text: "Thank you, {full_name}! How else can I help you today?"
+
+  utter_invalid_name:
+    - text: "Sorry, I didn't catch your full name properly. Could you please repeat it?"
+
+  utter_default:
+    - text: "I'm here to collect your full name. Please tell me your full name."
+
+actions:
+  - validate_full_name

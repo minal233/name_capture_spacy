@@ -1,0 +1,39 @@
+version: "3.1"
+
+nlu:
+  - intent: provide_name
+    examples: |
+      - My full name is [Amit Kumar Gupta](full_name)
+      - I'm [Priya Rani Sharma](full_name)
+      - name is [rajesh k pillai](full_name)
+      - my name iz [ameet guptha](full_name)
+      - im [priya sharma](full_name) from mumbai
+      - Hello, myself [Karthik Subramaniam](full_name)
+      - Its [Mohammed Abdul Kalam](full_name) here
+      - fullname [devi prasad yadav](full_name)
+      - I am [Anjali Kumari](full_name)
+      - [ravi teja](full_name) speaking
+      - my name be [s karthikeyan](full_name)
+      - hi bot name is [a r rahman](full_name)
+      - the name is [lakshmi narayanan iyer](full_name)
+      - call me [vikram singh rathore](full_name)
+      - its [r madhavan](full_name)
+      - im [minal shirodkar](full_name)
+      - myself [rajesh khanna](full_name)
+      - name [lakshmi bai](full_name)
+      - my fullname is [priya rani sharma](full_name)
+      - [a. k. antony](full_name) here
+
+  - intent: greet
+    examples: |
+      - hi
+      - hello
+      - hey
+      - good morning
+      - namaste
+      - good afternoon
+      - good evening
+      - hello there
+      - hi there
+      - hi bot
+      - hello bot
