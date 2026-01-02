@@ -19,6 +19,7 @@ source env/bin/activate    # On Windows: env\Scripts\activate
 # Install dependencies
 pip install rasa spacy
 python -m spacy download en_core_web_md
+```
 
 ## First-Time Setup
 
